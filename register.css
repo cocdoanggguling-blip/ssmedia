@@ -308,3 +308,23 @@ footer p {
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
   }
 }
+
+/* ===========================
+   VALIDASI STATE
+=========================== */
+.input-error {
+  color: #e05c7a;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.input-invalid {
+  border-color: #e05c7a !important;
+  box-shadow: 0 0 0 3px rgba(224, 92, 122, 0.12) !important;
+}
+
+.input-valid {
+  border-color: #4caf82 !important;
+  box-shadow: 0 0 0 3px rgba(76, 175, 130, 0.12) !important;
+}
