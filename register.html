@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar — Sosial</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-icon">◈</span>
+      <span class="logo-name">Sosial</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="register-card" aria-labelledby="register-title">
+
+      <h1 id="register-title">Buat Akun Baru</h1>
+      <p class="subtitle">Bergabung dan mulai berbagi hari ini</p>
+
+      <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          placeholder="Masukkan nama lengkap"
+          autocomplete="name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Contoh: andipratama"
+          autocomplete="username"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="contoh@email.com"
+          autocomplete="email"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Minimal 8 karakter"
+          autocomplete="new-password"
+          minlength="8"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="konfirmasi-password">Konfirmasi Password</label>
+        <input
+          type="password"
+          id="konfirmasi-password"
+          name="konfirmasi_password"
+          placeholder="Ulangi password kamu"
+          autocomplete="new-password"
+          minlength="8"
+          required
+        />
+      </div>
+
+      <button type="button" class="btn-primary">Daftar</button>
+
+      <div class="divider">
+        <span>atau</span>
+      </div>
+
+      <button type="button" class="btn-google">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="20" height="20" />
+        Daftar dengan Google
+      </button>
+
+      <p class="login-link">
+        Sudah punya akun? <a href="login.html">Masuk sekarang</a>
+      </p>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Sosial. Semua hak dilindungi.</p>
+  </footer>
+
+</body>
+</html>
