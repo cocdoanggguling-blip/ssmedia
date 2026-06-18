@@ -1,0 +1,310 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #0f0f13;
+  --color-surface: #1a1a23;
+  --color-border: #2e2e3e;
+  --color-border-focus: #7c6fcd;
+  --color-primary: #7c6fcd;
+  --color-primary-hover: #9182e0;
+  --color-text: #e8e8f0;
+  --color-muted: #7a7a94;
+  --color-input-bg: #12121a;
+  --color-google-bg: #1e1e2a;
+  --color-google-hover: #26263a;
+  --color-error: #e05c7a;
+  --font-display: 'Georgia', serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --transition: 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+  padding: 20px 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 24px;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+main {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8px 16px 40px;
+}
+
+/* ===========================
+   REGISTER CARD
+=========================== */
+.register-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.register-card h1 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--color-muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   FORM GROUPS
+=========================== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.form-group input {
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  padding: 11px 14px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+
+.form-group input::placeholder {
+  color: var(--color-muted);
+}
+
+.form-group input:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(124, 111, 205, 0.12);
+}
+
+.form-group input:invalid:not(:placeholder-shown) {
+  border-color: var(--color-error);
+}
+
+/* ===========================
+   TOMBOL DAFTAR
+=========================== */
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 6px;
+  padding: 12px;
+  transition: background-color var(--transition), transform var(--transition);
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+.divider {
+  align-items: center;
+  color: var(--color-muted);
+  display: flex;
+  font-size: 13px;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.divider::before,
+.divider::after {
+  background-color: var(--color-border);
+  content: '';
+  flex: 1;
+  height: 1px;
+}
+
+/* ===========================
+   TOMBOL GOOGLE
+=========================== */
+.btn-google {
+  align-items: center;
+  background-color: var(--color-google-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  gap: 10px;
+  justify-content: center;
+  padding: 11px;
+  transition: background-color var(--transition), border-color var(--transition);
+  width: 100%;
+}
+
+.btn-google:hover {
+  background-color: var(--color-google-hover);
+  border-color: var(--color-muted);
+}
+
+.btn-google img {
+  flex-shrink: 0;
+}
+
+/* ===========================
+   LINK LOGIN
+=========================== */
+.login-link {
+  color: var(--color-muted);
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-link a {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.login-link a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  padding: 16px;
+  text-align: center;
+}
+
+footer p {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+/* ===========================
+   RESPONSIVE — TABLET (480px+)
+=========================== */
+@media (min-width: 480px) {
+  header {
+    padding: 24px 32px;
+  }
+
+  main {
+    padding: 16px 24px 48px;
+    align-items: center;
+  }
+
+  .register-card {
+    padding: 36px 32px;
+  }
+
+  .register-card h1 {
+    font-size: 24px;
+  }
+}
+
+/* ===========================
+   RESPONSIVE — DESKTOP (768px+)
+=========================== */
+@media (min-width: 768px) {
+  body {
+    background-image: radial-gradient(
+      ellipse at 60% 20%,
+      rgba(124, 111, 205, 0.07) 0%,
+      transparent 60%
+    );
+  }
+
+  header {
+    padding: 28px 40px;
+  }
+
+  main {
+    padding: 24px 32px 64px;
+  }
+
+  .register-card {
+    padding: 40px 40px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  }
+}
