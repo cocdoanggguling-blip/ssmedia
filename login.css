@@ -1,0 +1,271 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #0f0f13;
+  --color-surface: #1a1a23;
+  --color-border: #2e2e3e;
+  --color-primary: #7c6fcd;
+  --color-primary-hover: #9182e0;
+  --color-text: #e8e8f0;
+  --color-muted: #7a7a94;
+  --color-input-bg: #12121a;
+  --color-google-bg: #1e1e2a;
+  --color-google-hover: #26263a;
+  --font-display: 'Georgia', serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   HEADER / LOGO
+=========================== */
+header {
+  padding: 24px 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 24px;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+/* ===========================
+   MAIN LAYOUT
+=========================== */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+/* ===========================
+   LOGIN CARD
+=========================== */
+.login-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-card h1 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--color-muted);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.form-group input {
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 15px;
+  font-family: var(--font-body);
+  padding: 11px 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.form-group input::placeholder {
+  color: var(--color-muted);
+}
+
+.form-group input:focus {
+  border-color: var(--color-primary);
+}
+
+/* ===========================
+   FORGOT PASSWORD
+=========================== */
+.forgot {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.forgot a {
+  color: var(--color-primary);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-google {
+  align-items: center;
+  background-color: var(--color-google-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  gap: 10px;
+  justify-content: center;
+  padding: 11px;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.btn-google:hover {
+  background-color: var(--color-google-hover);
+}
+
+.btn-google img {
+  flex-shrink: 0;
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+.divider {
+  align-items: center;
+  color: var(--color-muted);
+  display: flex;
+  font-size: 13px;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+/* ===========================
+   REGISTER LINK
+=========================== */
+.register-link {
+  color: var(--color-muted);
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register-link a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  padding: 20px 32px;
+  text-align: center;
+}
+
+footer p {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 480px) {
+  header {
+    padding: 16px 20px;
+  }
+
+  .login-card {
+    padding: 28px 20px;
+  }
+}
