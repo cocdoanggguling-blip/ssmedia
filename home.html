@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda — Sosial</title>
+</head>
+<body>
+
+  <!-- ===========================
+       NAVBAR
+  =========================== -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo-icon">◈</span>
+      <span class="logo-name">Sosial</span>
+    </div>
+    <div class="nav-center">
+      <input type="text" class="search-input" placeholder="Cari pengguna atau topik..." />
+    </div>
+    <div class="nav-right">
+      <a href="home.html" class="nav-link active">🏠 Beranda</a>
+      <a href="explore.html" class="nav-link">🔍 Jelajahi</a>
+      <a href="notifications.html" class="nav-link">🔔 Notifikasi</a>
+      <a href="profile.html" class="nav-link nav-avatar">
+        <img src="https://i.pravatar.cc/32?img=1" alt="Avatar" width="32" height="32" />
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===========================
+       LAYOUT UTAMA
+  =========================== -->
+  <div class="layout">
+
+    <!-- ===========================
+         SIDEBAR KIRI — PROFIL
+    =========================== -->
+    <aside class="sidebar-left">
+
+      <div class="profile-card">
+        <img src="https://i.pravatar.cc/80?img=1" alt="Foto Profil" class="profile-avatar" />
+        <h2 class="profile-name">Andi Pratama</h2>
+        <p class="profile-username">@andipratama</p>
+        <p class="profile-bio">Desainer UI/UX. Suka kopi & kode.</p>
+        <div class="profile-stats">
+          <div class="stat">
+            <span class="stat-number">128</span>
+            <span class="stat-label">Postingan</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3.4K</span>
+            <span class="stat-label">Pengikut</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">210</span>
+            <span class="stat-label">Mengikuti</span>
+          </div>
+        </div>
+        <a href="profile.html" class="btn-profile">Lihat Profil</a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="home.html" class="sidebar-link active">🏠 Beranda</a>
+        <a href="explore.html" class="sidebar-link">🔍 Jelajahi</a>
+        <a href="notifications.html" class="sidebar-link">🔔 Notifikasi</a>
+        <a href="messages.html" class="sidebar-link">💬 Pesan</a>
+        <a href="profile.html" class="sidebar-link">👤 Profil</a>
+        <a href="settings.html" class="sidebar-link">⚙️ Pengaturan</a>
+      </nav>
+
+    </aside>
+
+    <!-- ===========================
+         FEED UTAMA
+    =========================== -->
+    <main class="feed">
+
+      <!-- Buat Postingan -->
+      <div class="create-post">
+        <img src="https://i.pravatar.cc/40?img=1" alt="Avatar" class="create-avatar" />
+        <div class="create-input-wrap">
+          <textarea class="create-input" placeholder="Apa yang sedang kamu pikirkan?"></textarea>
+          <div class="create-actions">
+            <button type="button" class="btn-attach">📷 Foto</button>
+            <button type="button" class="btn-post">Posting</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===========================
+           POSTINGAN 1
+      =========================== -->
+      <article class="post-card">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/44?img=5" alt="Avatar" class="post-avatar" />
+          <div class="post-meta">
+            <span class="post-name">Sari Dewi</span>
+            <span class="post-username">@saridewi</span>
+            <span class="post-time">· 2 jam lalu</span>
+          </div>
+        </div>
+        <div class="post-body">
+          <p>Hari ini belajar hal baru tentang desain sistem. Ternyata konsistensi adalah kunci utama dalam membangun produk yang baik! 🎨</p>
+        </div>
+        <div class="post-footer">
+          <button type="button" class="btn-like">❤️ <span>48</span></button>
+          <button type="button" class="btn-comment">💬 <span>12</span></button>
+          <button type="button" class="btn-share">↗️ Bagikan</button>
+        </div>
+      </article>
+
+      <!-- ===========================
+           POSTINGAN 2 (dengan gambar)
+      =========================== -->
+      <article class="post-card">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/44?img=8" alt="Avatar" class="post-avatar" />
+          <div class="post-meta">
+            <span class="post-name">Budi Santoso</span>
+            <span class="post-username">@budisantoso</span>
+            <span class="post-time">· 5 jam lalu</span>
+          </div>
+        </div>
+        <div class="post-body">
+          <p>Pemandangan sore dari kantor baru kami. Tidak menyesal pindah ke sini! 🌇</p>
+          <img src="https://picsum.photos/seed/office/600/300" alt="Gambar postingan" class="post-image" />
+        </div>
+        <div class="post-footer">
+          <button type="button" class="btn-like">❤️ <span>134</span></button>
+          <button type="button" class="btn-comment">💬 <span>27</span></button>
+          <button type="button" class="btn-share">↗️ Bagikan</button>
+        </div>
+      </article>
+
+      <!-- ===========================
+           POSTINGAN 3
+      =========================== -->
+      <article class="post-card">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/44?img=12" alt="Avatar" class="post-avatar" />
+          <div class="post-meta">
+            <span class="post-name">Rina Kusuma</span>
+            <span class="post-username">@rinakusuma</span>
+            <span class="post-time">· 1 hari lalu</span>
+          </div>
+        </div>
+        <div class="post-body">
+          <p>Tips produktivitas: mulai hari dengan menulis 3 hal yang ingin kamu capai. Sederhana tapi efektif! ✅ #produktivitas #tips</p>
+        </div>
+        <div class="post-footer">
+          <button type="button" class="btn-like">❤️ <span>89</span></button>
+          <button type="button" class="btn-comment">💬 <span>9</span></button>
+          <button type="button" class="btn-share">↗️ Bagikan</button>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- ===========================
+         SIDEBAR KANAN
+    =========================== -->
+    <aside class="sidebar-right">
+
+      <div class="widget">
+        <h3 class="widget-title">Saran Mengikuti</h3>
+        <ul class="suggest-list">
+          <li class="suggest-item">
+            <img src="https://i.pravatar.cc/36?img=20" alt="Avatar" />
+            <div class="suggest-info">
+              <span class="suggest-name">Maya Lestari</span>
+              <span class="suggest-username">@mayalestari</span>
+            </div>
+            <button type="button" class="btn-follow">Ikuti</button>
+          </li>
+          <li class="suggest-item">
+            <img src="https://i.pravatar.cc/36?img=25" alt="Avatar" />
+            <div class="suggest-info">
+              <span class="suggest-name">Dani Wahyu</span>
+              <span class="suggest-username">@daniwahyu</span>
+            </div>
+            <button type="button" class="btn-follow">Ikuti</button>
+          </li>
+          <li class="suggest-item">
+            <img src="https://i.pravatar.cc/36?img=30" alt="Avatar" />
+            <div class="suggest-info">
+              <span class="suggest-name">Putri Ayu</span>
+              <span class="suggest-username">@putriayu</span>
+            </div>
+            <button type="button" class="btn-follow">Ikuti</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h3 class="widget-title">Trending</h3>
+        <ul class="trending-list">
+          <li class="trending-item">
+            <span class="trending-tag">#produktivitas</span>
+            <span class="trending-count">2.1K postingan</span>
+          </li>
+          <li class="trending-item">
+            <span class="trending-tag">#desainui</span>
+            <span class="trending-count">1.4K postingan</span>
+          </li>
+          <li class="trending-item">
+            <span class="trending-tag">#teknologi</span>
+            <span class="trending-count">980 postingan</span>
+          </li>
+          <li class="trending-item">
+            <span class="trending-tag">#indonesia</span>
+            <span class="trending-count">750 postingan</span>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div><!-- /.layout -->
+
+  <footer>
+    <p>© 2024 Sosial. Semua hak dilindungi.</p>
+  </footer>
+
+</body>
+</html>
