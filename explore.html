@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jelajahi — Sosial</title>
+  <link rel="stylesheet" href="explore.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="home.html" class="logo"><span class="logo-icon">◈</span><span class="logo-name">Sosial</span></a>
+    </div>
+    <div class="nav-center">
+      <input type="text" id="searchInput" class="search-input" placeholder="Cari pengguna, topik, hashtag..." oninput="handleSearch(this.value)" />
+    </div>
+    <div class="nav-right">
+      <a href="home.html" class="nav-link">🏠</a>
+      <a href="explore.html" class="nav-link active">🔍</a>
+      <a href="notifications.html" class="nav-link">🔔</a>
+      <a href="messages.html" class="nav-link">💬</a>
+      <a href="profile.html" class="nav-link">👤</a>
+    </div>
+  </nav>
+
+  <main class="explore-main">
+
+    <section class="explore-tabs">
+      <button class="tab-btn active" onclick="switchTab('trending', this)">🔥 Trending</button>
+      <button class="tab-btn" onclick="switchTab('users', this)">👥 Pengguna</button>
+      <button class="tab-btn" onclick="switchTab('hashtags', this)">🏷️ Hashtag</button>
+    </section>
+
+    <!-- Trending -->
+    <section id="tab-trending" class="tab-content">
+      <h2 class="section-title">Postingan Trending</h2>
+      <div id="trendingFeed" class="post-feed"></div>
+    </section>
+
+    <!-- Users -->
+    <section id="tab-users" class="tab-content hidden">
+      <h2 class="section-title">Temukan Pengguna</h2>
+      <div id="userGrid" class="user-grid"></div>
+    </section>
+
+    <!-- Hashtags -->
+    <section id="tab-hashtags" class="tab-content hidden">
+      <h2 class="section-title">Hashtag Populer</h2>
+      <div id="hashtagList" class="hashtag-list"></div>
+    </section>
+
+    <!-- Hasil Pencarian -->
+    <section id="searchResults" class="hidden">
+      <h2 class="section-title">Hasil Pencarian: "<span id="searchQuery"></span>"</h2>
+      <div id="searchFeed" class="post-feed"></div>
+    </section>
+
+  </main>
+
+  <script src="explore.js"></script>
+</body>
+</html>
