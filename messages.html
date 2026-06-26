@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesan — Sosial</title>
+  <link rel="stylesheet" href="messages.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="home.html" class="logo"><span class="logo-icon">◈</span><span class="logo-name">Sosial</span></a>
+    </div>
+    <div class="nav-center">
+      <input type="text" class="search-input" placeholder="Cari..." />
+    </div>
+    <div class="nav-right">
+      <a href="home.html" class="nav-link">🏠</a>
+      <a href="explore.html" class="nav-link">🔍</a>
+      <a href="notifications.html" class="nav-link">🔔</a>
+      <a href="messages.html" class="nav-link active">💬</a>
+      <a href="profile.html" class="nav-link">👤</a>
+    </div>
+  </nav>
+
+  <main class="messages-main">
+
+    <!-- Daftar Percakapan -->
+    <aside class="conversation-list">
+      <div class="conv-header">
+        <h2>Pesan</h2>
+        <button class="btn-new" onclick="alert('Fitur pesan baru segera hadir!')">✏️</button>
+      </div>
+      <input type="text" class="conv-search" placeholder="Cari percakapan..." oninput="filterConversations(this.value)" />
+      <div id="convList"></div>
+    </aside>
+
+    <!-- Area Chat -->
+    <section class="chat-area">
+      <div id="chatEmpty" class="chat-empty">
+        <p>💬</p>
+        <p>Pilih percakapan untuk mulai chat</p>
+      </div>
+
+      <div id="chatActive" class="hidden">
+        <div class="chat-header">
+          <img id="chatAvatar" src="" alt="" class="chat-avatar" />
+          <div>
+            <div id="chatName" class="chat-name"></div>
+            <div id="chatUsername" class="chat-username"></div>
+          </div>
+        </div>
+
+        <div id="chatMessages" class="chat-messages"></div>
+
+        <div class="chat-input-wrap">
+          <input type="text" id="chatInput" class="chat-input" placeholder="Tulis pesan..." onkeydown="if(event.key==='Enter') sendMessage()" />
+          <button class="btn-send" onclick="sendMessage()">Kirim</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="messages.js"></script>
+</body>
+</html>
