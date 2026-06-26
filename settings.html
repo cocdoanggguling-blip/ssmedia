@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengaturan — Sosial</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="home.html" class="logo"><span class="logo-icon">◈</span><span class="logo-name">Sosial</span></a>
+    </div>
+    <div class="nav-right">
+      <a href="home.html" class="nav-link">🏠</a>
+      <a href="explore.html" class="nav-link">🔍</a>
+      <a href="notifications.html" class="nav-link">🔔</a>
+      <a href="messages.html" class="nav-link">💬</a>
+      <a href="profile.html" class="nav-link">👤</a>
+    </div>
+  </nav>
+
+  <main class="settings-main">
+    <aside class="settings-sidebar">
+      <h2>Pengaturan</h2>
+      <nav class="settings-nav">
+        <a href="#akun" class="settings-link active" onclick="showSection('akun', this)">👤 Akun</a>
+        <a href="#privasi" class="settings-link" onclick="showSection('privasi', this)">🔒 Privasi</a>
+        <a href="#notifikasi" class="settings-link" onclick="showSection('notifikasi', this)">🔔 Notifikasi</a>
+        <a href="#tampilan" class="settings-link" onclick="showSection('tampilan', this)">🎨 Tampilan</a>
+        <a href="#keamanan" class="settings-link" onclick="showSection('keamanan', this)">🛡️ Keamanan</a>
+      </nav>
+    </aside>
+
+    <section class="settings-content">
+
+      <!-- Akun -->
+      <div id="section-akun" class="settings-section">
+        <h3>Pengaturan Akun</h3>
+        <div class="field">
+          <label>Nama Lengkap</label>
+          <input type="text" value="Andi Pratama" />
+        </div>
+        <div class="field">
+          <label>Username</label>
+          <input type="text" value="andipratama" />
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" value="andi@email.com" />
+        </div>
+        <div class="field">
+          <label>Bio</label>
+          <textarea>Desainer UI/UX. Suka kopi & kode. ☕</textarea>
+        </div>
+        <div class="field">
+          <label>Website</label>
+          <input type="url" placeholder="https://websitemu.com" />
+        </div>
+        <button class="btn-save" onclick="saveSettings('Akun')">Simpan Perubahan</button>
+      </div>
+
+      <!-- Privasi -->
+      <div id="section-privasi" class="settings-section hidden">
+        <h3>Pengaturan Privasi</h3>
+        <div class="toggle-item">
+          <div>
+            <div class="toggle-label">Akun Privat</div>
+            <div class="toggle-desc">Hanya pengikut yang disetujui bisa melihat postinganmu</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="privateAccount" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="toggle-item">
+          <div>
+            <div class="toggle-label">Sembunyikan Aktivitas Online</div>
+            <div class="toggle-desc">Pengguna lain tidak bisa melihat kapan kamu aktif</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="hideActivity" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="toggle-item">
+          <div>
+            <div class="toggle-label">Izinkan Tag di Postingan</div>
+            <div class="toggle-desc">Pengguna lain bisa menandaimu di postingan</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="allowTag" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button class="btn-save" onclick="saveSettings('Privasi')">Simpan Perubahan</button>
+      </div>
+
+      <!-- Notifikasi -->
+      <div id="section-notifikasi" class="settings-section hidden">
+        <h3>Pengaturan Notifikasi</h3>
+        <div class="toggle-item">
+          <div>
+            <div class="toggle-label">Suka pada Postingan</div>
+            <div class="toggle-desc">Notifikasi saat ada yang menyukai postinganmu</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="toggle-item">
+          <div>
+            <div class="toggle-label">Komentar Baru</div>
+            <div class="toggle-desc">Notifikasi saat ada yang berkomentar</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="toggle-item">
+          <div>
+            <div class="toggle-label">Pengikut Baru</div>
+            <div class="toggle-desc">Notifikasi saat ada yang mengikutimu</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="toggle-item">
+          <div>
+            <div class="toggle-label">Pesan Langsung</div>
+            <div class="toggle-desc">Notifikasi saat ada pesan masuk</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button class="btn-save" onclick="saveSettings('Notifikasi')">Simpan Perubahan</button>
+      </div>
+
+      <!-- Tampilan -->
+      <div id="section-tampilan" class="settings-section hidden">
+        <h3>Pengaturan Tampilan</h3>
+        <div class="field">
+          <label>Tema</label>
+          <select onchange="applyTheme(this.value)">
+            <option value="dark" selected>🌙 Gelap</option>
+            <option value="light">☀️ Terang</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Bahasa</label>
+          <select>
+            <option value="id" selected>🇮🇩 Bahasa Indonesia</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
+        <button class="btn-save" onclick="saveSettings('Tampilan')">Simpan Perubahan</button>
+      </div>
+
+      <!-- Keamanan -->
+      <div id="section-keamanan" class="settings-section hidden">
+        <h3>Keamanan Akun</h3>
+        <div class="field">
+          <label>Password Lama</label>
+          <input type="password" placeholder="Masukkan password lama" />
+        </div>
+        <div class="field">
+          <label>Password Baru</label>
+          <input type="password" placeholder="Masukkan password baru" />
+        </div>
+        <div class="field">
+          <label>Konfirmasi Password Baru</label>
+          <input type="password" placeholder="Ulangi password baru" />
+        </div>
+        <button class="btn-save" onclick="saveSettings('Keamanan')">Ubah Password</button>
+        <hr class="divider" />
+        <div class="danger-zone">
+          <h4>Zona Berbahaya</h4>
+          <p>Tindakan berikut tidak dapat dibatalkan.</p>
+          <button class="btn-danger" onclick="confirmDelete()">🗑️ Hapus Akun</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="settings.js"></script>
+</body>
+</html>
